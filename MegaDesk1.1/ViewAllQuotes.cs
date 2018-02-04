@@ -45,7 +45,7 @@ namespace MegaDesk1dot1
                         while (!sr.EndOfStream)
                         {
                             //DEBUG: MessageBox.Show("Found " + quoteRow, "Search Results");
-                            listViewAllQuotes.Items.Add(quoteRow);
+                            listViewAllQuotes.Items.Add(quoteRow); 
                             quoteRow = sr.ReadLine();
                         }
                     }
