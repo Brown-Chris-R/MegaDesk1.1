@@ -143,6 +143,7 @@ namespace MegaDesk1dot1
                     using (StreamWriter sw = File.AppendText(quoteFile))
                     {
                         sw.WriteLine(quoteRecord);
+                        sw.Flush();
                     }
                 }
                 catch (Exception ex)

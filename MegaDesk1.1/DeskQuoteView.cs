@@ -37,7 +37,7 @@ namespace MegaDesk1dot1
 
         private void DeskQuoteView_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(this.Tag.GetType().ToString(),"Tag Type");
+            //DEBUG: MessageBox.Show(this.Tag.GetType().ToString(),"Tag Type");
 
         }
 

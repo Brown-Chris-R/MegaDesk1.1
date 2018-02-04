@@ -41,15 +41,15 @@ namespace MegaDesk1dot1
                 {
                     using (StreamReader sr = new StreamReader(quoteFile))
                     {
-                        string quoteRow = sr.ReadLine();
+                        string quoteRow;
                         while (!sr.EndOfStream)
                         {
+                            quoteRow = sr.ReadLine();
                             if (quoteRow.Contains(Material))
                             {
                                 //DEBUG: MessageBox.Show("Found " + quoteRow, "Search Results");
                                 listViewMaterialSearchResults.Items.Add(quoteRow);
                             }
-                            quoteRow = sr.ReadLine();
                         }
                     }
                 }
