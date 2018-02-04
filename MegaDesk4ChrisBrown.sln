@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2024
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaDesk3ChrisBrown", "MegaDesk1\MegaDesk3ChrisBrown.csproj", "{782526A7-B1D5-4009-8540-D998E424A6D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MegaDesk4ChrisBrown", "MegaDesk1.1\MegaDesk4ChrisBrown.csproj", "{782526A7-B1D5-4009-8540-D998E424A6D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{50EC0EC4-282F-4B3F-BB40-40C0FFCC586E}"
 	ProjectSection(SolutionItems) = preProject

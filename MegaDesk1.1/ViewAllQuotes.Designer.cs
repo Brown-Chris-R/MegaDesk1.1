@@ -1,4 +1,4 @@
-﻿namespace MegaDesk1
+﻿namespace MegaDesk1dot1
 {
     partial class ViewAllQuotes
     {
@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.buttonCancelViewAllQuotes = new System.Windows.Forms.Button();
+            this.listViewAllQuotes = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // buttonCancelViewAllQuotes
@@ -41,14 +43,32 @@
             this.buttonCancelViewAllQuotes.UseVisualStyleBackColor = true;
             this.buttonCancelViewAllQuotes.Click += new System.EventHandler(this.buttonCancelViewAllQuotes_Click);
             // 
+            // listViewAllQuotes
+            // 
+            this.listViewAllQuotes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1});
+            this.listViewAllQuotes.Location = new System.Drawing.Point(12, 43);
+            this.listViewAllQuotes.Name = "listViewAllQuotes";
+            this.listViewAllQuotes.Size = new System.Drawing.Size(468, 198);
+            this.listViewAllQuotes.TabIndex = 1;
+            this.listViewAllQuotes.UseCompatibleStateImageBehavior = false;
+            this.listViewAllQuotes.View = System.Windows.Forms.View.List;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Quote Data";
+            this.columnHeader1.Width = 465;
+            // 
             // ViewAllQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.ClientSize = new System.Drawing.Size(493, 253);
+            this.Controls.Add(this.listViewAllQuotes);
             this.Controls.Add(this.buttonCancelViewAllQuotes);
             this.Name = "ViewAllQuotes";
             this.Text = "ViewAllQuotes";
+            this.Load += new System.EventHandler(this.ViewAllQuotes_Load);
             this.ResumeLayout(false);
 
         }
@@ -56,5 +76,7 @@
         #endregion
 
         private System.Windows.Forms.Button buttonCancelViewAllQuotes;
+        private System.Windows.Forms.ListView listViewAllQuotes;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
     }
 }

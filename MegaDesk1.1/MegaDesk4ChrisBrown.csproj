@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{782526A7-B1D5-4009-8540-D998E424A6D5}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>MegaDesk1</RootNamespace>
-    <AssemblyName>MegaDesk1</AssemblyName>
+    <RootNamespace>MegaDesk1dot1</RootNamespace>
+    <AssemblyName>MegaDesk1dot1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -56,6 +56,12 @@
     </Compile>
     <Compile Include="Desk.cs" />
     <Compile Include="DeskQuote.cs" />
+    <Compile Include="DeskQuoteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeskQuoteView.Designer.cs">
+      <DependentUpon>DeskQuoteView.cs</DependentUpon>
+    </Compile>
     <Compile Include="DisplayQuote.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     </Compile>
     <EmbeddedResource Include="AddQuote.resx">
       <DependentUpon>AddQuote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DeskQuoteView.resx">
+      <DependentUpon>DeskQuoteView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

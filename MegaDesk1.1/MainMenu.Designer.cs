@@ -1,4 +1,4 @@
-﻿namespace MegaDesk1
+﻿namespace MegaDesk1dot1
 {
     partial class MainMenu
     {
@@ -105,7 +105,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainMenu";
-            this.Text = "Mega Desk 1.0";
+            this.Text = "Mega Desk 1.1";
             this.Load += new System.EventHandler(this.MainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

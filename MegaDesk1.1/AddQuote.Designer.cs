@@ -1,4 +1,4 @@
-﻿namespace MegaDesk1
+﻿namespace MegaDesk1dot1
 {
     partial class AddQuote
     {
@@ -41,6 +41,9 @@
             this.labelMaterial = new System.Windows.Forms.Label();
             this.comboBoxMaterial = new System.Windows.Forms.ComboBox();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.comboBoxRushOrder = new System.Windows.Forms.ComboBox();
+            this.labelRushOrder = new System.Windows.Forms.Label();
+            this.buttonGetQuote = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepth)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrawers)).BeginInit();
@@ -49,18 +52,19 @@
             // 
             // buttonCancelQuote
             // 
-            this.buttonCancelQuote.Location = new System.Drawing.Point(12, 12);
+            this.buttonCancelQuote.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonCancelQuote.Location = new System.Drawing.Point(15, 170);
             this.buttonCancelQuote.Name = "buttonCancelQuote";
             this.buttonCancelQuote.Size = new System.Drawing.Size(75, 44);
             this.buttonCancelQuote.TabIndex = 0;
-            this.buttonCancelQuote.Text = "Cancel Quote";
+            this.buttonCancelQuote.Text = "Cancel";
             this.buttonCancelQuote.UseVisualStyleBackColor = true;
             this.buttonCancelQuote.Click += new System.EventHandler(this.buttonCancelQuote_Click);
             // 
             // labelCustomerName
             // 
             this.labelCustomerName.AutoSize = true;
-            this.labelCustomerName.Location = new System.Drawing.Point(103, 12);
+            this.labelCustomerName.Location = new System.Drawing.Point(33, 14);
             this.labelCustomerName.Name = "labelCustomerName";
             this.labelCustomerName.Size = new System.Drawing.Size(113, 17);
             this.labelCustomerName.TabIndex = 1;
@@ -68,7 +72,7 @@
             // 
             // textBoxCustomerName
             // 
-            this.textBoxCustomerName.Location = new System.Drawing.Point(223, 13);
+            this.textBoxCustomerName.Location = new System.Drawing.Point(153, 15);
             this.textBoxCustomerName.Name = "textBoxCustomerName";
             this.textBoxCustomerName.Size = new System.Drawing.Size(335, 22);
             this.textBoxCustomerName.TabIndex = 2;
@@ -76,15 +80,15 @@
             // labelWidth
             // 
             this.labelWidth.AutoSize = true;
-            this.labelWidth.Location = new System.Drawing.Point(168, 47);
+            this.labelWidth.Location = new System.Drawing.Point(37, 51);
             this.labelWidth.Name = "labelWidth";
-            this.labelWidth.Size = new System.Drawing.Size(48, 17);
+            this.labelWidth.Size = new System.Drawing.Size(109, 17);
             this.labelWidth.TabIndex = 3;
-            this.labelWidth.Text = "Width:";
+            this.labelWidth.Text = "Width (24\"-96\"):";
             // 
             // numericUpDownWidth
             // 
-            this.numericUpDownWidth.Location = new System.Drawing.Point(223, 47);
+            this.numericUpDownWidth.Location = new System.Drawing.Point(153, 49);
             this.numericUpDownWidth.Maximum = new decimal(new int[] {
             96,
             0,
@@ -109,15 +113,15 @@
             // labelDepth
             // 
             this.labelDepth.AutoSize = true;
-            this.labelDepth.Location = new System.Drawing.Point(342, 47);
+            this.labelDepth.Location = new System.Drawing.Point(234, 51);
             this.labelDepth.Name = "labelDepth";
-            this.labelDepth.Size = new System.Drawing.Size(50, 17);
+            this.labelDepth.Size = new System.Drawing.Size(111, 17);
             this.labelDepth.TabIndex = 5;
-            this.labelDepth.Text = "Depth:";
+            this.labelDepth.Text = "Depth (12\"-48\"):";
             // 
             // numericUpDownDepth
             // 
-            this.numericUpDownDepth.Location = new System.Drawing.Point(398, 47);
+            this.numericUpDownDepth.Location = new System.Drawing.Point(351, 49);
             this.numericUpDownDepth.Maximum = new decimal(new int[] {
             48,
             0,
@@ -143,7 +147,7 @@
             // labelDrawers
             // 
             this.labelDrawers.AutoSize = true;
-            this.labelDrawers.Location = new System.Drawing.Point(82, 85);
+            this.labelDrawers.Location = new System.Drawing.Point(12, 87);
             this.labelDrawers.Name = "labelDrawers";
             this.labelDrawers.Size = new System.Drawing.Size(134, 17);
             this.labelDrawers.TabIndex = 7;
@@ -151,7 +155,7 @@
             // 
             // numericUpDownDrawers
             // 
-            this.numericUpDownDrawers.Location = new System.Drawing.Point(223, 85);
+            this.numericUpDownDrawers.Location = new System.Drawing.Point(153, 87);
             this.numericUpDownDrawers.Maximum = new decimal(new int[] {
             7,
             0,
@@ -166,7 +170,7 @@
             // labelMaterial
             // 
             this.labelMaterial.AutoSize = true;
-            this.labelMaterial.Location = new System.Drawing.Point(330, 85);
+            this.labelMaterial.Location = new System.Drawing.Point(283, 87);
             this.labelMaterial.Name = "labelMaterial";
             this.labelMaterial.Size = new System.Drawing.Size(62, 17);
             this.labelMaterial.TabIndex = 9;
@@ -177,27 +181,59 @@
             this.comboBoxMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxMaterial.FormattingEnabled = true;
             this.comboBoxMaterial.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.comboBoxMaterial.Items.AddRange(new object[] {
-            "Laminate",
-            "Oak",
-            "Rosewood",
-            "Veneer",
-            "Pine"});
-            this.comboBoxMaterial.Location = new System.Drawing.Point(398, 82);
+            this.comboBoxMaterial.Location = new System.Drawing.Point(351, 86);
             this.comboBoxMaterial.MaxDropDownItems = 5;
             this.comboBoxMaterial.Name = "comboBoxMaterial";
-            this.comboBoxMaterial.Size = new System.Drawing.Size(160, 24);
+            this.comboBoxMaterial.Size = new System.Drawing.Size(137, 24);
             this.comboBoxMaterial.TabIndex = 10;
             // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // comboBoxRushOrder
+            // 
+            this.comboBoxRushOrder.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxRushOrder.FormattingEnabled = true;
+            this.comboBoxRushOrder.Items.AddRange(new object[] {
+            "Standard",
+            "3 Days",
+            "5 Days",
+            "7 Days"});
+            this.comboBoxRushOrder.Location = new System.Drawing.Point(153, 124);
+            this.comboBoxRushOrder.Name = "comboBoxRushOrder";
+            this.comboBoxRushOrder.Size = new System.Drawing.Size(75, 24);
+            this.comboBoxRushOrder.TabIndex = 11;
+            // 
+            // labelRushOrder
+            // 
+            this.labelRushOrder.AutoSize = true;
+            this.labelRushOrder.Location = new System.Drawing.Point(60, 127);
+            this.labelRushOrder.Name = "labelRushOrder";
+            this.labelRushOrder.Size = new System.Drawing.Size(86, 17);
+            this.labelRushOrder.TabIndex = 12;
+            this.labelRushOrder.Text = "Rush Order:";
+            // 
+            // buttonGetQuote
+            // 
+            this.buttonGetQuote.Location = new System.Drawing.Point(153, 170);
+            this.buttonGetQuote.Name = "buttonGetQuote";
+            this.buttonGetQuote.Size = new System.Drawing.Size(335, 44);
+            this.buttonGetQuote.TabIndex = 13;
+            this.buttonGetQuote.Text = "Quote this desk";
+            this.buttonGetQuote.UseVisualStyleBackColor = true;
+            this.buttonGetQuote.Click += new System.EventHandler(this.buttonGetQuote_Click);
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 253);
+            this.CancelButton = this.buttonCancelQuote;
+            this.ClientSize = new System.Drawing.Size(509, 253);
+            this.ControlBox = false;
+            this.Controls.Add(this.buttonGetQuote);
+            this.Controls.Add(this.labelRushOrder);
+            this.Controls.Add(this.comboBoxRushOrder);
             this.Controls.Add(this.comboBoxMaterial);
             this.Controls.Add(this.labelMaterial);
             this.Controls.Add(this.numericUpDownDrawers);
@@ -209,8 +245,11 @@
             this.Controls.Add(this.textBoxCustomerName);
             this.Controls.Add(this.labelCustomerName);
             this.Controls.Add(this.buttonCancelQuote);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddQuote";
             this.Text = "AddQuote";
+            this.Load += new System.EventHandler(this.AddQuote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownWidth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDepth)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDrawers)).EndInit();
@@ -234,5 +273,8 @@
         private System.Windows.Forms.Label labelMaterial;
         private System.Windows.Forms.ComboBox comboBoxMaterial;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label labelRushOrder;
+        private System.Windows.Forms.ComboBox comboBoxRushOrder;
+        private System.Windows.Forms.Button buttonGetQuote;
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace MegaDesk1
+﻿namespace MegaDesk1dot1
 {
     partial class DisplayQuote
     {
